@@ -4,6 +4,7 @@ import net.xenotime.actor.types.living.humanoid.HumanoidActor
 import net.xenotime.math.angle.Angle
 import net.xenotime.math.vector.Vector3d
 import net.xenotime.network.game.session.GameSession
+import net.xenotime.world.World
 
 class Player {
 
@@ -26,6 +27,9 @@ class Player {
     var pitch: Float
         get() = actor.angle.pitch
         set(value) { actor.angle.pitch = value }
+
+    val world: World
+        get() = actor.world
 
     val angle: Angle
         get() = actor.angle
