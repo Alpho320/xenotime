@@ -4,12 +4,11 @@ import net.xenotime.network.game.proto.GamePacket
 import net.xenotime.network.game.proto.GameProto
 import net.xenotime.network.wormhole.proto.WormholePacket
 import net.xenotime.network.wormhole.proto.WormholeProto
-import java.util.*
 
 object NetworkUtils {
 
     object Game {
-        fun newPacket(id: Byte): GamePacket? {
+        fun newPacket(id: Int): GamePacket? {
             GameProto.values().filter {
                 it.id() == id
             }.let {
@@ -23,7 +22,7 @@ object NetworkUtils {
     }
 
     object Wormhole {
-        fun newPacket(id: Byte): WormholePacket? {
+        fun newPacket(id: Int): WormholePacket? {
             WormholeProto.values().filter {
                 it.id() == id
             }.let {
