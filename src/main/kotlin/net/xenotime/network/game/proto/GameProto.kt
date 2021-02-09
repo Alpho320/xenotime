@@ -9,6 +9,7 @@ enum class GameProto(private val id: Byte, private val reference: KClass<out Gam
     HandshakeServerToClient(0x03, HandshakeServerToClientPacket::class),
     HandshakeClientToServer(0x04, HandshakeClientToServerPacket::class),
 
+    //Todo: make this int const
     Batch(0xff.toByte(), BatchPacket::class);
 
     fun id(): Byte {
