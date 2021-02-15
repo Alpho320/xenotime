@@ -9,6 +9,7 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    maven(url = "https://repo.codemc.org/repository/maven-public/")
 }
 
 tasks.withType<KotlinCompile>() {
@@ -16,4 +17,6 @@ tasks.withType<KotlinCompile>() {
 }
 dependencies {
     implementation(kotlin("reflect"))
+    implementation("com.whirvis:jraknet:2.12.4-SNAPSHOT")
+    implementation("me.steinborn:libdeflate-java-core:0.1.0-SNAPSHOT")
 }
