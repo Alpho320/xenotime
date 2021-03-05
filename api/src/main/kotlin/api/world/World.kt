@@ -1,4 +1,4 @@
 package api.world
 
-abstract class World {
+interface World {
 }

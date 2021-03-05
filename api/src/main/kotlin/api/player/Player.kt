@@ -2,7 +2,7 @@ package api.player
 
 import api.actor.types.living.humanoid.HumanoidActor
 
-abstract class Player {
+interface Player {
 
-    abstract val actor: HumanoidActor
+    val actor: HumanoidActor
 }
