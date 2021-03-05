@@ -25,6 +25,7 @@
 </p>
 
 
-## 🚀 Getting Started
+## 🚀 Getting started
 
-## 📦 Features
+## 📦 Differences
+- Modern API
