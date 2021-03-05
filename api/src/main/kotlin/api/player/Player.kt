@@ -1,8 +1,8 @@
 package api.player
 
-import api.actor.Actor
+import api.actor.types.living.humanoid.HumanoidActor
 
 abstract class Player {
 
-    abstract val actor: Actor
+    abstract val actor: HumanoidActor
 }
