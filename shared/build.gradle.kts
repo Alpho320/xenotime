@@ -5,7 +5,7 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":shared"))
+    implementation(project(":api"))
 }
 
 tasks.withType<KotlinCompile>() {

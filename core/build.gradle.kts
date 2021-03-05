@@ -5,7 +5,8 @@ plugins {
 }
 
 dependencies {
-    implementation(project(":shared"))
+    implementation(project(":proxy"))
+    implementation(project(":server"))
 }
 
 tasks.withType<KotlinCompile>() {
