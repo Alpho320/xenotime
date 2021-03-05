@@ -12,7 +12,7 @@
   </a>
 
   <a href="https://opensource.org/licenses/gpl-3.0.html">
-    <img alt="License" src="https://img.shields.io/github/license/xenotimemc/xenotime?color=green&style=for-the-badge">
+    <img alt="License" src="https://img.shields.io/github/license/xenotimemc/xenotime?color=success&style=for-the-badge">
   </a>
 
   <a href="https://github.com/XenotimeMC/Xenotime/issues">
