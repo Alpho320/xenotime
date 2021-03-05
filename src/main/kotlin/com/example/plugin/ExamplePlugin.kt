@@ -4,12 +4,12 @@ import net.xenotime.plugin.Plugin
 import net.xenotime.plugin.PluginContext
 
 @Plugin(
-        "example-plugin",
-        "1.0.0",
-        "Example Plugin",
-        "1.0.0",
-        "This is an test Plugin for Xenotime Server Software",
-        [
+        id = "example-plugin",
+        api = "1.0.0",
+        name = "Example Plugin",
+        version = "1.0.0",
+        description = "This is an test Plugin for Xenotime Server Software",
+        authors = [
             "eminarican"
         ]
 )
