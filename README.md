@@ -28,5 +28,5 @@
 ## 🚀 Getting started
 `SOON`
 
-## 📦 Differences
+## ⭐️ Differences
 `SOON`
