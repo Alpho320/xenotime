@@ -17,8 +17,6 @@ class XenotimeServer : Server {
     override fun start() {
         network.start()
 
-        while (true) {
-
-        }
+        while (true) { }
     }
 }

@@ -4,7 +4,8 @@ import api.server.Server
 import com.nukkitx.protocol.bedrock.BedrockPong
 import com.nukkitx.protocol.bedrock.BedrockServerEventHandler
 import com.nukkitx.protocol.bedrock.BedrockServerSession
-import server.XenotimeServer
+import server.network.session.NetworkSession
+import server.network.session.NetworkSessionListener
 import server.player.XenotimePlayer
 import java.net.InetSocketAddress
 
