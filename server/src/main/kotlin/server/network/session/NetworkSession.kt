@@ -159,6 +159,15 @@ class NetworkSession(private val connection: BedrockSession) {
         creativeContentPacket.contents = arrayOfNulls(0)
         connection.sendPacketImmediately(creativeContentPacket)
 
+        val creativePacket = InventoryContentPacket()
+        creativePacket.containerId = ContainerId.CREATIVE
+        //creativePacket.contents =
+        connection.sendPacket(creativePacket)
+
+        val biomePacket = BiomeDefinitionListPacket()
+        //biomePacket.definitions =
+        connection.sendPacket(biomePacket)
+
         val pos = Vector3f.ZERO
         val chunkX = pos.floorX shr 4
         val chunkZ = pos.floorX shr 4
