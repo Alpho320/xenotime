@@ -4,13 +4,7 @@ import com.nukkitx.math.vector.Vector2f
 import com.nukkitx.math.vector.Vector3f
 import com.nukkitx.math.vector.Vector3i
 import com.nukkitx.protocol.bedrock.BedrockSession
-import com.nukkitx.protocol.bedrock.packet.PlayStatusPacket
-import com.nukkitx.protocol.bedrock.packet.ResourcePacksInfoPacket
-import com.nukkitx.protocol.bedrock.packet.ServerToClientHandshakePacket
-import com.nukkitx.protocol.bedrock.packet.StartGamePacket
 import com.nukkitx.protocol.bedrock.data.inventory.ItemData
-
-import com.nukkitx.protocol.bedrock.packet.CreativeContentPacket
 
 import com.nukkitx.protocol.bedrock.data.AuthoritativeMovementMode
 
@@ -24,22 +18,12 @@ import com.nukkitx.protocol.bedrock.data.GameRuleData
 
 import com.nukkitx.protocol.bedrock.data.GameType
 
-import com.nukkitx.protocol.bedrock.packet.MovePlayerPacket
 import com.nukkitx.protocol.bedrock.data.AttributeData
 
 import java.util.ArrayList
 
-import com.nukkitx.protocol.bedrock.packet.UpdateAttributesPacket
-
 import com.nukkitx.protocol.bedrock.data.inventory.ContainerId
 
-import com.nukkitx.protocol.bedrock.packet.InventoryContentPacket
-
-import com.nukkitx.protocol.bedrock.packet.AvailableEntityIdentifiersPacket
-
-import com.nukkitx.protocol.bedrock.packet.BiomeDefinitionListPacket
-
-import com.nukkitx.protocol.bedrock.packet.LevelChunkPacket
 import java.io.IOException
 
 import com.nukkitx.nbt.NbtUtils
@@ -49,6 +33,7 @@ import com.nukkitx.nbt.NBTOutputStream
 import java.io.ByteArrayOutputStream
 
 import com.nukkitx.nbt.NbtMap
+import com.nukkitx.protocol.bedrock.packet.*
 
 class NetworkSession(private val connection: BedrockSession) {
 
@@ -85,6 +70,10 @@ class NetworkSession(private val connection: BedrockSession) {
 
     fun rpinfo() {
         connection.sendPacketImmediately(ResourcePacksInfoPacket())
+    }
+
+    fun rpstack() {
+        connection.sendPacketImmediately(ResourcePackStackPacket())
     }
 
     fun startgame() {

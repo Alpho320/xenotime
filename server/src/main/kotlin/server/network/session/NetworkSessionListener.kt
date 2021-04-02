@@ -7,6 +7,8 @@ import com.nukkitx.protocol.bedrock.packet.ResourcePackClientResponsePacket
 
 class NetworkSessionListener(private val session: NetworkSession) : BedrockPacketHandler {
 
+    private var stack = false
+
     override fun handle(packet: LoginPacket): Boolean {
         session.handshake()
         return true
@@ -19,7 +21,12 @@ class NetworkSessionListener(private val session: NetworkSession) : BedrockPacke
     }
 
     override fun handle(packet: ResourcePackClientResponsePacket): Boolean {
-        session.startgame()
+        if (!stack) {
+            session.rpstack()
+            stack = true
+        } else {
+            session.startgame()
+        }
         return true
     }
 }
